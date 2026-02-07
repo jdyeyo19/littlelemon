@@ -1,7 +1,10 @@
+import Hero from "./Hero"
 
 function Main() {
     return(
-        <main>Main content</main>
+        <main>
+            <Hero />
+        </main>
     )
 }
 

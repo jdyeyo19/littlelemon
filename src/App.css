@@ -1,15 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Libertinus+Mono&family=Markazi+Text:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Karla:ital,wght@0,200..800;1,200..800&family=Libertinus+Mono&family=Markazi+Text:wght@400..700&display=swap');
+
+/*font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;*/
+
 * {
   margin: 0;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  margin-top: 1rem;
+  flex: 1; /*ocupa todo el espacio sobrante enviando el footer al final*/
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+h1 {
+  color: #f4ce14;
+  font-family: "Markazi Text", serif;
+  font-weight: 700; /*400 regular, 500 medium, 600 semibold, 700 bold*/
+  font-style: normal;
+  font-size: clamp(64px, 64px, 64px);
+}
+ul {
+  list-style: none;
+}
+button {
+  background-color: #f4ce14;
+  border-radius: 1rem;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 10px 25px;
+  width:fit-content;
 }
 /*CSS FOR MEDIUM TO LG SCRENS*/
 /*===============HEADER===============*/
 
 header {
   max-height: 145px;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  margin-top: 3rem;
+  padding: 1rem 3rem 1rem 3rem;
   display: flex;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.1);
 }
 .logo-container {
   object-fit: cover;
@@ -23,13 +61,108 @@ header {
 nav {
   width: 70%;
 }
-nav ul {
+.header-nav-container {
   height: 100%;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
-a {
-  text-decoration: none;
+.header-nav-container li {
+  height: fit-content;
+  font-family: "Markazi Text", serif;
+  font-weight: 700; /*400 regular, 500 medium, 600 semibold, 700 bold*/
+  font-style: normal;
+  font-size: 24px;
+}
+/*===============FOOTER===============*/
+footer {
+  max-height: 290px;
+  background-color: #495E57;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 2rem 0 2rem;
+  margin-top: 2rem;
+}
+.footer_logo {
+  height: fit-content;
+  width: 25%;
+  background-color: white;
+  padding: 0.5rem;
+  align-self: center;
+  border-radius: 16px;
+}
+.footer_logo img {
+  width: 100%;
+  object-fit:contain;
+}
+.footer-nav-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.footer-nav-container h2 {
+  height: fit-content;
+  margin-bottom: 1rem;
+}
+.footer-navigation a {
+  color: white;
+  font-family:"Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /*400 regular, 500 medium, 600 semibold, 700 bold*/
+  font-style: normal;
+  font-size: 24px;
+}
+/*===============HERO//BANNER===============*/
+.hero-container{
+  max-height: 580px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.hero-green {
+  background-color: #495E57;
+  grid-column: 1/13;
+  grid-row: 1/5;
+  z-index: 2;
+}
+.hero-white {
+  grid-column: 1/13;
+  grid-row: 5/6;
+  z-index: 1;
+}
+.hero-info-card {
+  grid-column: 3/6;
+  grid-row: 2/4;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.hero-info-card h2 {
+  color: white;
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+}
+.hero-image {
+  grid-column: 7/10;
+  grid-row: 2/6;
+  z-index: 4;
+}
+.hero-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
 }

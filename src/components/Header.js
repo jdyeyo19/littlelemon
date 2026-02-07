@@ -6,13 +6,13 @@ function Header() {
                 <img src={logo} alt="little_lemon_logo."/>
             </div>
             <nav>
-                <ul>
+                <ul className="header-nav-container">
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#">MENU</a></li>
                     <li><a href="#">RESERVATIONS</a></li>
                     <li><a href="#">ORDER ONLINE</a></li>
-                    <li><a href="#">lOGIN</a></li>
+                    <li><a href="#">LOGIN</a></li>
                 </ul>
             </nav>
         </header>
