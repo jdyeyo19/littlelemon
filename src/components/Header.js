@@ -1,5 +1,10 @@
 import logo from '../Assets/logo.jpg'
+import { Link, useLocation } from 'react-router-dom';
+
 function Header() {
+
+    const location = useLocation();
+    const ishome = location.pathname === "/"
     return(
         <header>
             <div className="logo-container">
@@ -7,11 +12,11 @@ function Header() {
             </div>
             <nav>
                 <ul className="header-nav-container">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
+                    <li><Link to="/">HOME</Link></li>
+                    <li>{ ishome ? <a href="#about">ABOUT</a>:<Link to="/">ABOUT</Link>}</li>
                     <li><a href="#">MENU</a></li>
-                    <li><a href="#">RESERVATIONS</a></li>
-                    <li><a href="#">ORDER ONLINE</a></li>
+                    <li><Link to="/reservations">RESERVATIONS</Link></li>
+                    <li><Link to="#">ORDER ONLINE</Link></li>
                     <li><a href="#">LOGIN</a></li>
                 </ul>
             </nav>

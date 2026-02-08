@@ -6,7 +6,7 @@ function Footer() {
             <div className="footer_logo">
                 <img src={logo} alt="little_lemon_logo."/>
             </div>
-            <div className="footer-nav-container">
+            <div className="footer-nav-contai">
                 <h2>Doormat Navigation</h2>
                 <nav>
                     <ul className="footer-navigation">
@@ -19,7 +19,7 @@ function Footer() {
                     </ul>
                 </nav>
             </div>
-            <div className="footer-nav-container">
+            <div className="footer-nav-contai">
                 <h2>Contact</h2>
                 <nav>
                     <ul className="footer-navigation">
@@ -29,7 +29,7 @@ function Footer() {
                     </ul>
                 </nav>
             </div>
-            <div className="footer-nav-container">
+            <div className="footer-nav-contai">
                 <h2>Social Media Links</h2>
                 <nav>
                     <ul className="footer-navigation">

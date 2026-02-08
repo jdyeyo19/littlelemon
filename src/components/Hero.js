@@ -1,7 +1,7 @@
 import sushi from '../Assets/sushi.jpg'
 export default function Hero(){
     return(
-        <section className="hero-container">
+        <section className="hero-contai">
             <div className="hero-green"></div>
             <div className="hero-white"></div>
             <div className="hero-info-card">
@@ -13,7 +13,7 @@ export default function Hero(){
                 <button>Reserve a Table</button>
             </div>
             <div className="hero-image">
-                <img src={sushi}/>
+                <img src={sushi} alt='sushi_rolls'/>
             </div>
         </section>
     )
