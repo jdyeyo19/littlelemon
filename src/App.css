@@ -307,7 +307,194 @@ footer h2 {
   border-radius: 1rem;
   box-shadow: 2px -5px 15px 2px black;
 }
+/*===============LOADER===============*/
+.loader {
+  width: 35px;
+  height: 80px;
+  position: relative;
+  margin: 15px 0;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px 5px;
+  border-top: 1px solid #bbb6aa;
+  border-bottom: 4px solid #bbb6aa;
+  background:
+    linear-gradient(#f4ce14 0 0) bottom no-repeat content-box,
+    #e4e0d7;
+  mix-blend-mode: darken;
+  animation: l1 2s infinite linear;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  inset: -18px calc(50% - 2px) 8px;
+  background: #eb6b3e;
+  transform-origin: bottom;
+  transform: rotate(8deg);
+}
+@keyframes l1 {
+ 0%   {background-size: 100% 100%}
+ 100% {background-size: 100% 5%}
+}
+
+.loader-1 {
+  width: fit-content;
+  font-weight: bold;
+  font-family: "Karla", sans-serif;
+  font-size: 30px;
+  color:#0000;
+  background:linear-gradient(90deg,#000 calc(50% - 0.5ch),#f4ce14 0 calc(50% + 0.5ch),#000 0) right/calc(200% + 1ch) 100%;
+  -webkit-background-clip:text;
+          background-clip:text;
+  animation: l8 2s infinite steps(11);
+}
+.loader-1:before {
+  content:"Loading..."
+}
+@keyframes l8 {to{background-position: left}}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /*===============Reservation===============*/
-.reservation {
-  height: 100vh;
+.reserve-banner {
+  background-color: #495E57;
+  max-height: 580px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.reserve-info, .reserve-image{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+.reserve-image img{
+  border-radius: 1rem;
+  height: 80%;
+}
+form {
+  display: flex;
+  max-width: 400px;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+fieldset {
+  width: 100%;
+  background-color: #EDEFEE;
+  border-radius: 1rem;
+  font-family: "Karla", sans-serif;
+  display: flex;
+  gap: 15px;
+}
+legend {
+  border: 2px solid #EDEFEE;
+  background-color: #FF8E1D;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.date-container {
+  flex-direction: column;
+}
+.date-container input{
+  width: 30%;
+  align-self: center;
+  border-radius: 0.5rem;
+}
+.hours-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hours-container label{
+  flex: 0 0 calc(33.333% - 15px);
+  margin-left: 5px;
+}
+input {
+  field-sizing: content;
+  padding: 10px;
+}
+.guests-container{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.guests-container label {
+  font-weight: bold;
+}
+.guests-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.guests-buttons input {
+  color: black !important;      /* Fuerza el color de fuente negro */
+  background-color: #ffffff;   /* Opcional: fondo blanco */
+  border: 1px solid black;      /* Opcional: borde visible */
+  opacity: 1;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+.occasion-container, .email-container {
+  flex-direction: column;
+}
+.occasion-container select {
+  width: 30%;
+  align-self: center;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-family: "Karla", sans-serif;
+  text-align: center;
+}
+.email-container div{
+  align-self: center;
+  margin-right: 50px;
+}
+.email-input-container {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+}
+.email-input{
+  padding-left: 40px; /* Espacio para el icono */
+  height: 20px;
+  width: 100%;
+  border-radius: 1rem;
+  right: 15px;
+}
+.error-message {
+  margin-left: 5px;
+  align-self: center;
+  color: red;
+  font-size: 15px;
+}
+.email-icon {
+  position: absolute;
+  left: 10px; /* Posición horizontal */
+  top: 50%;
+  transform: translateY(-50%); /* Centrado vertical */
+  color: #666; /* Color del icono */
+  pointer-events: none; /* Permite clic a través del icono */
+}
+.doingReserve {
+  margin: 20px 0;
+}
+form button {
+  align-self: center;
+  margin-top: 1rem;
+}
+form h5 {
+  color: red;
 }

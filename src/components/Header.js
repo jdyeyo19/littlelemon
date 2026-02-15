@@ -1,10 +1,21 @@
 import logo from '../Assets/logo.jpg'
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 function Header() {
 
     const location = useLocation();
     const ishome = location.pathname === "/"
+
+    const navigate = useNavigate()
+    const handlenavigation = () => {
+        navigate('/');
+
+        setTimeout( () => {
+            document
+            .getElementById("about")
+            ?.scrollIntoView({ behavior: "smooth"})
+        }, 200);
+    };
     return(
         <header>
             <div className="logo-container">
@@ -13,7 +24,7 @@ function Header() {
             <nav>
                 <ul className="header-nav-container">
                     <li><Link to="/">HOME</Link></li>
-                    <li>{ ishome ? <a href="#about">ABOUT</a>:<Link to="/">ABOUT</Link>}</li>
+                    <li>{ ishome ? <a href="#about">ABOUT</a>:<a onClick={handlenavigation}>ABOUT</a>}</li>
                     <li><a href="#">MENU</a></li>
                     <li><Link to="/reservations">RESERVATIONS</Link></li>
                     <li><Link to="#">ORDER ONLINE</Link></li>
