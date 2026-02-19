@@ -1,8 +1,11 @@
 import logo from '../Assets/logo.jpg'
+import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Menu, X } from "lucide-react";
 
 function Header() {
 
+    const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
     const ishome = location.pathname === "/"
 
@@ -16,19 +19,29 @@ function Header() {
             ?.scrollIntoView({ behavior: "smooth"})
         }, 200);
     };
+    const toggleMenu = () => {
+        setIsOpen(prev => !prev);
+    };
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
     return(
         <header>
+            {/* Mobile Icon */}
+            <div className="mobile-menu-icon" onClick={toggleMenu}>
+                {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </div>
             <div className="logo-container">
                 <img src={logo} alt="little_lemon_logo."/>
             </div>
-            <nav>
+            <nav className={`nav ${isOpen ? "nav-open" : ""}`}>
                 <ul className="header-nav-container">
-                    <li><Link to="/">HOME</Link></li>
-                    <li>{ ishome ? <a href="#about">ABOUT</a>:<a onClick={handlenavigation}>ABOUT</a>}</li>
-                    <li><a href="#">MENU</a></li>
-                    <li><Link to="/reservations">RESERVATIONS</Link></li>
-                    <li><Link to="#">ORDER ONLINE</Link></li>
-                    <li><a href="#">LOGIN</a></li>
+                    <li className='nav-item'><Link to="/" onClick={closeMenu}>HOME</Link></li>
+                    <li className='nav-item'>{ ishome ? <a href="#about" onClick={closeMenu}>ABOUT</a>:<a onClick={()=>{handlenavigation();closeMenu()}}>ABOUT</a>}</li>
+                    <li className='nav-item'><Link to="/menu" onClick={closeMenu}>MENU</Link></li>
+                    <li className='nav-item'><Link to="/reservations" onClick={closeMenu}>RESERVATIONS</Link></li>
+                    <li className='nav-item'><Link to="/orderonline" onClick={closeMenu}>ORDER ONLINE</Link></li>
+                    <li className='nav-item'><a href="#" onClick={closeMenu}>LOGIN</a></li>
                 </ul>
             </nav>
         </header>

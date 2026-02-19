@@ -91,12 +91,12 @@ export default function Reservation(){
             <div className="doingReserve">
                 {doingReserve ? <Loader />: null}
             </div>
-            {activereserve ? null: <form onSubmit={handleSubmit}>
+            {activereserve ? null: <form onSubmit={handleSubmit} className="reservation-form">
                 <h2>Reserve Your Table!</h2>
                 <h5>IMPORTANT: All fields are required!</h5>
                 <ChooseDate handleDateChange={handleDateChange}/>
                 {loader && <Loader loader={loader}/>}
-                {!loader && < HourSelector
+                {!loader && < BookingSlot
                 day={day}
                 selectedHour={hour}
                 onChange={setHour}
@@ -214,7 +214,7 @@ function Email({setEmail, email}){
     )
 }
 {/* Seleccionar franjas horairas */}
-const HourSelector = ({ day, selectedHour, onChange }) => {
+const BookingSlot = ({ day, selectedHour, onChange }) => {
   if (day === 0) return null;
 
   let hours = [];

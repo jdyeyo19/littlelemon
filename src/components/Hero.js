@@ -1,4 +1,6 @@
 import sushi from '../Assets/sushi.jpg'
+import { Link } from 'react-router-dom';
+
 export default function Hero(){
     return(
         <section className="hero-contai">
@@ -10,7 +12,7 @@ export default function Hero(){
                 <p>We are a family owned Mediterranean restaurant, focused on traditional
                      recipes serve with a modern twist.
                 </p>
-                <button>Reserve a Table</button>
+                <button><Link to="/reservations">Reserve a Table</Link></button>
             </div>
             <div className="hero-image">
                 <img src={sushi} alt='sushi_rolls'/>

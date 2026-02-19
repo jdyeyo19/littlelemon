@@ -24,7 +24,7 @@ function Testimonials() {
                     </div>
                     <div className="client-info">
                         <img className="client-pic" src="https://img.freepik.com/free-photo/happy-excited-girl-with-flying-darkhaired-girl-is-turn-around-camera-while-walking-down-road-with-green-yellow-trees-happy-girl-walking-city_291650-2409.jpg?semt=ais_hybrid&w=740&q=80"/>
-                        <h5>Sara Smith</h5>
+                        <h5>Sarah Smith</h5>
                     </div>
                     <p>"The best desserts I have ever tried"</p>
                 </div>
