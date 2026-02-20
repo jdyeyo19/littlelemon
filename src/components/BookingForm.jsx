@@ -149,7 +149,8 @@ function ChooseDate ({handleDateChange}){
             type="date"
             id="res-date"
             onChange={handleDateChange}
-            min={currentDate}/>
+            min={currentDate}
+            aria-label="date of reservation"/>
         </fieldset>
     )
 }
@@ -160,7 +161,7 @@ function GuestsNumber({guestHandlerPlus,guestHandlerMinus,guest}){
             <label htmlFor="guests">Number of guests</label>
             <div className="guests-buttons">
                 <span onClick={guestHandlerMinus}>{guest !== 1 && <SquareMinus fill="#f4ce14"/>}</span>
-                <input type="number" value={guest} id="guests" readOnly/>
+                <input type="number" value={guest} id="guests" readOnly aria-label="your number of guests"/>
                 <span onClick={guestHandlerPlus}>{guest !== 10 && <SquarePlus fill="#f4ce14"/>}</span>
             </div>
         </div>
@@ -171,7 +172,7 @@ function Occasion({occasionHandler,occasion}){
     return(
         <fieldset className="occasion-container">
             <legend>Occasion</legend>
-            <select id="occasion" value={occasion} onChange={occasionHandler}>
+            <select id="occasion" value={occasion} onChange={occasionHandler} aria-label="occasion">
                 <option value="None">None</option>
                 <option value="Birthday">Birthday</option>
                 <option value="Anniversary">Anniversary</option>
@@ -207,6 +208,7 @@ function Email({setEmail, email}){
                     border: showError ? "2px solid red" : "1px solid #ccc",
                     outline: "none",
                 }}
+                aria-label="email address"
                 />
             </div>
             {showError && <p className="error-message">Please enter a valid email address!!</p>}
@@ -214,18 +216,21 @@ function Email({setEmail, email}){
     )
 }
 {/* Seleccionar franjas horairas */}
+export function updateTimes (day){
+    if (day === 0) return [];
+    if ((day >= 1 && day <= 5) || (day >= 16 && day <= 20)) {
+        return ["17:00", "18:30", "19:00", "20:00", "20:30", "22:00"];
+    } else if ((day >= 6 && day <= 10) || (day >= 21 && day <= 25)) {
+        return ["17:30", "18:00", "18:30", "19:30", "20:30", "21:00"];
+    } else if ((day >= 11 && day <= 15) || (day >= 26 && day <= 31)) {
+        return ["16:00", "17:30", "18:00", "19:30", "21:00", "21:30"];
+    }
+  return [];
+  }
 const BookingSlot = ({ day, selectedHour, onChange }) => {
   if (day === 0) return null;
 
-  let hours = [];
-
-  if ((day >= 1 && day <= 5) || (day >= 16 && day <= 20)) {
-    hours = ["17:00", "18:30", "19:00", "20:00", "20:30", "22:00"];
-  } else if ((day >= 6 && day <= 10) || (day >= 21 && day <= 25)) {
-    hours = ["17:30", "18:00", "18:30", "19:30", "20:30", "21:00"];
-  } else if ((day >= 11 && day <= 15) || (day >= 26 && day <= 31)) {
-    hours = ["16:00", "17:30", "18:00", "19:30", "21:00", "21:30"];
-  }
+  let hours = updateTimes(day);
 
   return (
     <fieldset className="hours-container">
