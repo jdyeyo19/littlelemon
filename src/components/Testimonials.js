@@ -12,7 +12,7 @@ function Testimonials() {
                         <Star fill='#f4ce14'/><Star fill='#f4ce14' /><Star fill='#f4ce14'/><Star fill='#f4ce14'/><Star/>
                     </div>
                     <div className="client-info">
-                        <img className="client-pic" src={client1}/>
+                        <img className="client-pic" src={client1} alt='Yamada_Taro_Picture'/>
                         <h5>Yamada Taro</h5>
                     </div>
                     <p>"My friends invited me for my birthday, I loved the food"</p>
@@ -23,7 +23,11 @@ function Testimonials() {
                         <Star fill='#f4ce14'/><Star fill='#f4ce14' /><Star fill='#f4ce14'/><Star fill='#f4ce14'/><Star fill='#f4ce14'/>
                     </div>
                     <div className="client-info">
-                        <img className="client-pic" src="https://img.freepik.com/free-photo/happy-excited-girl-with-flying-darkhaired-girl-is-turn-around-camera-while-walking-down-road-with-green-yellow-trees-happy-girl-walking-city_291650-2409.jpg?semt=ais_hybrid&w=740&q=80"/>
+                        <img
+                            className="client-pic" 
+                            src="https://img.freepik.com/free-photo/happy-excited-girl-with-flying-darkhaired-girl-is-turn-around-camera-while-walking-down-road-with-green-yellow-trees-happy-girl-walking-city_291650-2409.jpg?semt=ais_hybrid&w=740&q=80"
+                            alt='Sarah_Smith_Picture'
+                            />
                         <h5>Sarah Smith</h5>
                     </div>
                     <p>"The best desserts I have ever tried"</p>
@@ -34,7 +38,11 @@ function Testimonials() {
                         <Star fill='#f4ce14'/><Star fill='#f4ce14' /><Star fill='#f4ce14'/><Star /><Star/>
                     </div>
                     <div className="client-info">
-                        <img className="client-pic" src="https://img.freepik.com/free-photo/front-view-wise-woman-posing-studio_23-2149883511.jpg?semt=ais_hybrid&w=740&q=80"/>
+                        <img
+                            className="client-pic" 
+                            src="https://img.freepik.com/free-photo/front-view-wise-woman-posing-studio_23-2149883511.jpg?semt=ais_hybrid&w=740&q=80"
+                            alt="Magy_Doe_Picture"
+                            />
                         <h5>Magy Doe</h5>
                     </div>
                     <p>"Not many options for vegetarians. However, the greek salad was delicious"</p>

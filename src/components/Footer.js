@@ -26,11 +26,11 @@ function Footer() {
                 <nav>
                     <ul className="footer-navigation">
                         <li><Link to="/" >HOME</Link></li>
-                    <li>{ ishome ? <a href="#about" >ABOUT</a>:<a onClick={()=>{handlenavigation()}}>ABOUT</a>}</li>
+                    <li>{ ishome ? <a href="#about" >ABOUT</a>:<Link to="/" onClick={()=>{handlenavigation()}}>ABOUT</Link>}</li>
                     <li><Link to="/menu" >MENU</Link></li>
                     <li><Link to="/reservations" >RESERVATIONS</Link></li>
                     <li><Link to="/orderonline" >ORDER ONLINE</Link></li>
-                    <li><a href="#" >LOGIN</a></li>
+                    <li><a href="/" >LOGIN</a></li>
                     </ul>
                 </nav>
             </div>
@@ -38,9 +38,9 @@ function Footer() {
                 <h2>Contact</h2>
                 <nav>
                     <ul className="footer-navigation">
-                        <li><a title="123 Main St, Chicago, IL, 60018" onClick={()=>{alert("123 Main St, Chicago, IL, 60018")}}>Address</a></li>
-                        <li><a title="3124567890" onClick={()=>{alert("3124567890")}}>Phone Number</a></li>
-                        <li><a title="example@littlelemon.com" onClick={()=>{alert("example@littlelemon.com")}}>Email</a></li>
+                        <li><Link title="123 Main St, Chicago, IL, 60018" onClick={()=>{alert("123 Main St, Chicago, IL, 60018")}}>Address</Link></li>
+                        <li><Link title="3124567890" onClick={()=>{alert("3124567890")}}>Phone Number</Link></li>
+                        <li><Link title="example@littlelemon.com" onClick={()=>{alert("example@littlelemon.com")}}>Email</Link></li>
                     </ul>
                 </nav>
             </div>
@@ -48,9 +48,9 @@ function Footer() {
                 <h2>Social Media Links</h2>
                 <nav>
                     <ul className="footer-navigation">
-                        <li><a>Facebook</a></li>
-                        <li><a>Instagram</a></li>
-                        <li><a>Whatsapp</a></li>
+                        <li><Link to="/">Facebook</Link></li>
+                        <li><Link to="/">Instagram</Link></li>
+                        <li><Link to="/">Whatsapp</Link></li>
                     </ul>
                 </nav>
             </div>

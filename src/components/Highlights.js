@@ -1,7 +1,7 @@
 import greek from '../Assets/greek_salad.jpg'
 import brushetta from '../Assets/brushetta.jpg'
 import lemon from '../Assets/lemon_dessert.jpg'
-import {Bike, Bold} from 'lucide-react'
+import {Bike} from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export default function Highlights (){
@@ -21,7 +21,7 @@ export default function Highlights (){
                     return(
                     <div className="weeks-card" key={p.id}>
                         <div className="weeks-card-img">
-                            <img src={p.image}/>
+                            <img src={p.image} alt={p.name}/>
                         </div>
                         <div className="weeks-card-info">
                             <div className="wci-tittle">

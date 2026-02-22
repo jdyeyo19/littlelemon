@@ -122,8 +122,6 @@ export default function Reservation(){
     )
 }
 
-{/*Reservation banner */}
-
 function ReserveHere(){
     return(
         <div className="reserve-banner">
@@ -134,12 +132,11 @@ function ReserveHere(){
                 </p>
             </div>
             <div className="reserve-image">
-                <img src={pescaito}/>
+                <img src={pescaito} alt="fish_dish"/>
             </div>
         </div>
     )
 }
-{/*CHOOSE A DATE*/}
 function ChooseDate ({handleDateChange}){
     const currentDate = new Date().toISOString().split('T')[0];
     return(
@@ -154,7 +151,6 @@ function ChooseDate ({handleDateChange}){
         </fieldset>
     )
 }
-{/*NUMBER OF GUESTS*/}
 function GuestsNumber({guestHandlerPlus,guestHandlerMinus,guest}){
     return(
         <div className="guests-container">
@@ -167,7 +163,6 @@ function GuestsNumber({guestHandlerPlus,guestHandlerMinus,guest}){
         </div>
     )
 }
-{/*OCCASION*/}
 function Occasion({occasionHandler,occasion}){
     return(
         <fieldset className="occasion-container">
@@ -180,7 +175,6 @@ function Occasion({occasionHandler,occasion}){
         </fieldset>
     )
 }
-{/*EMAIL*/}
 function Email({setEmail, email}){
 
     const [isValid, setIsValid] = useState(false);
@@ -215,7 +209,6 @@ function Email({setEmail, email}){
         </fieldset>
     )
 }
-{/* Seleccionar franjas horairas */}
 export function updateTimes (day){
     if (day === 0) return [];
     if ((day >= 1 && day <= 5) || (day >= 16 && day <= 20)) {
@@ -251,7 +244,6 @@ const BookingSlot = ({ day, selectedHour, onChange }) => {
     </fieldset>
   );
 };
-{/*LOADER*/}
 function Loader(){
         return(
         <div className="loader-container">

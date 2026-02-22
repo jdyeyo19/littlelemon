@@ -28,8 +28,8 @@ export default function About (){
                 </p>
             </div>
             <div className='founders'>
-                <img src={maria} id='maria'/>
-                <img src={antonio} id='antonio'/>
+                <img src={maria} id='maria'alt='Maria_picture'/>
+                <img src={antonio} id='antonio' alt='Antonio_picture'/>
             </div>
         </article>
     )

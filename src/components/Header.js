@@ -37,11 +37,11 @@ function Header() {
             <nav className={`nav ${isOpen ? "nav-open" : ""}`}>
                 <ul className="header-nav-container">
                     <li className='nav-item'><Link to="/" onClick={closeMenu}>HOME</Link></li>
-                    <li className='nav-item'>{ ishome ? <a href="#about" onClick={closeMenu}>ABOUT</a>:<a onClick={()=>{handlenavigation();closeMenu()}}>ABOUT</a>}</li>
+                    <li className='nav-item'>{ ishome ? <a href="#about" onClick={closeMenu}>ABOUT</a>:<Link to="/" onClick={()=>{handlenavigation();closeMenu()}}>ABOUT</Link>}</li>
                     <li className='nav-item'><Link to="/menu" onClick={closeMenu}>MENU</Link></li>
                     <li className='nav-item'><Link to="/reservations" onClick={closeMenu}>RESERVATIONS</Link></li>
                     <li className='nav-item'><Link to="/orderonline" onClick={closeMenu}>ORDER ONLINE</Link></li>
-                    <li className='nav-item'><a href="#" onClick={closeMenu}>LOGIN</a></li>
+                    <li className='nav-item'><a href="/" onClick={closeMenu}>LOGIN</a></li>
                 </ul>
             </nav>
         </header>
