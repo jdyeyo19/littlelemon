@@ -17,7 +17,7 @@ html {
   scroll-behavior: smooth;
 }
 main {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   flex: 1; /*ocupa todo el espacio sobrante enviando el footer al final*/
 }
 a {
