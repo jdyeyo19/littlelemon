@@ -1,3 +1,61 @@
+Proyecto: Little Lemon website
+
+Descripción: 
+Página web hecha con React.js para restaurante con banner de anuncios, sección de platos destacados, historia de los fundadores, menú y reserva.
+
+Tecnologías:
+-HTML
+-CSS
+-Javascript
+-React
+
+Funcionalidades:
+- Navegación del sitio en la parte superior con diseño que se adapta a cualquier tamaño de pantalla.
+- Simulación de la reserva de una mesa eligiendo fecha, hora, número de invitados y ocasión.
+
+Requisitos de software:
+-Node.js y npm: Son el motor y el gestor de paquetes que permiten ejecutar código JavaScript fuera del navegador.
+-Editor de código.
+-Navegador web: para visualizar tu aplicación.
+
+Requisitos de conocimiento:
+- JavaScript moderno (ES6+)
+- HTML
+-CSS
+
+Enlace:
+https://littlelemon-seven.vercel.app/
+
+#English
+Project: Little Lemon Website
+
+Description:
+A website built with React.js for a restaurant, featuring a promotional banner, a section for featured dishes, the founders' story, a menu, and a reservation system.
+
+Technologies:
+- HTML
+- CSS
+- JavaScript
+- React
+
+Features:
+- Site navigation located at the top of the page, featuring a responsive design that adapts to any screen size.
+- A simulated table reservation process allowing users to select a date, time, number of guests, and occasion.
+
+Software Requirements:
+- Node.js and npm: The runtime environment and package manager that enable the execution of JavaScript code outside of a web browser.
+- Code editor.
+- Web browser: To view your application.
+
+Knowledge Requirements:
+- Modern JavaScript (ES6+)
+- HTML
+- CSS
+
+Link:
+https://littlelemon-seven.vercel.app/
+
+#Installation
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
